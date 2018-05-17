@@ -4,12 +4,12 @@
     Sub Main()
         Console.WriteLine("Calculo de la Hipotenusa ")
         Console.WriteLine("--------------------------------------")
-        ladoa = Ingreso()
-        ladob = Ingreso()
+        ladoa = Ingresar()
+        ladob = Ingresar()
         Console.WriteLine("Su hipotenusa es: " & Hipotenusa(ladoa, ladob))
     End Sub
 
-    Function Ingreso()
+    Function Ingresar()
         Dim num As Integer
         Console.Write("Ingrese un lado del triangulo: ")
         num = Console.ReadLine()
