@@ -9,7 +9,7 @@
         Next
     End Sub
 
-    Function Potencia(numero As Integer, exponente As Integer)
+    Function Potencia(ByVal numero As Integer, ByVal exponente As Integer) As Integer
         Console.WriteLine(numero & "^" & exponente & " = " & Math.Pow(numero, exponente))
         Return 0
     End Function
