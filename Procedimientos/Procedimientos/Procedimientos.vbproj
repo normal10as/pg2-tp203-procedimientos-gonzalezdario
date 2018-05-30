@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F2DEA8CC-1B14-406B-8078-5AD2633F9353}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Procedimientos.SumatoriaCuadrados</StartupObject>
+    <StartupObject>Procedimientos.Area</StartupObject>
     <RootNamespace>Procedimientos</RootNamespace>
     <AssemblyName>Procedimientos</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="3_01_Module1.vb" />
     <Compile Include="3_04_Hipotenusa.vb" />
+    <Compile Include="3_09_Area.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -89,6 +90,8 @@
     <Compile Include="3_03_Potencia.vb" />
     <Compile Include="3_05_VolumenCilindro.vb" />
     <Compile Include="3_06_SumatoriaCuadrados.vb" />
+    <Compile Include="3_07_OperacionesSobrecarga.vb" />
+    <Compile Include="3_08_OperacionesSobrecargas2.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
