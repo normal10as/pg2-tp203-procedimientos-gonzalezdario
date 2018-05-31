@@ -25,7 +25,7 @@
 
     End Sub
 
-    Sub Resultado(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer)
+    Sub Resultado(a As Byte, b As Integer, c As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " = " & Calcular(a, b, c))
@@ -38,7 +38,7 @@
         End Select
     End Sub
 
-    Sub Resultado(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer)
+    Sub Resultado(a As Byte, b As Integer, c As Integer, d As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " + " & d & " = " & Calcular(a, b, c, d))
@@ -51,7 +51,7 @@
         End Select
     End Sub
 
-    Sub Resultado(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer, ByVal e As Integer)
+    Sub Resultado(a As Byte, b As Integer, c As Integer, d As Integer, e As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " + " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
@@ -64,11 +64,11 @@
         End Select
     End Sub
 
-    Sub Resultado(ByVal a As Integer, ByVal b As Integer)
+    Sub Resultado(a As Integer, b As Integer)
         Console.WriteLine(a & " + " & b & " = " & Calcular(operaciones.suma, a, b))
     End Sub
 
-    Function Calcular(ByRef operacion As Byte, ByVal a As Integer, ByVal b As Integer) As Integer
+    Function Calcular(operacion As Byte, a As Integer, b As Integer) As Integer
         Dim x As Integer
         Select Case operacion
             Case 1
@@ -83,15 +83,15 @@
         Return x
     End Function
 
-    Function Calcular(ByVal a As Integer, ByVal b As Integer) As Integer
+    Function Calcular(a As Integer, b As Integer) As Integer
         Return Calcular(operaciones.suma, a, b)
     End Function
 
-    Function Calcular(ByRef operacion As Byte, ByVal a As Integer, ByVal b As Integer, ByVal c As Integer) As Integer
+    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), c)
     End Function
 
-    Function Calcular(ByRef operacion As Byte, ByVal a As Integer, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer) As Integer
+    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer, d As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), Calcular(operacion, c, d))
     End Function
 

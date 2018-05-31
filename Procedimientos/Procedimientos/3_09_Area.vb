@@ -41,19 +41,19 @@
         End Select
     End Sub
 
-    Function Area(ByVal a As Double) As Double
+    Function Area(a As Double) As Double
         Dim resultado As Double
         resultado = a * a
         Return resultado
     End Function
 
-    Function Area(ByVal a As Double, ByVal b As Double) As Double
+    Function Area(a As Double, b As Double) As Double
         Dim resultado As Double
         resultado = a * b
         Return resultado
     End Function
 
-    Function Area(ByVal a As Double, ByVal b As Double, ByVal c As Double) As Double
+    Function Area(a As Double, b As Double, c As Double) As Double
         Dim resultado As Double
         resultado = ((a + b) / 2) * c
         Return resultado

@@ -25,7 +25,7 @@
 
     End Sub
 
-    Function Calcular(ByRef operacion As Byte, ByVal a As Integer, ByVal b As Integer) As Integer
+    Function Calcular(operacion As Byte, a As Integer, b As Integer) As Integer
         Dim resultado As Integer
         Select Case operacion
             Case 1
@@ -40,15 +40,15 @@
         Return resultado
     End Function
 
-    Function Calcular(ByVal a As Integer, ByVal b As Integer) As Integer
+    Function Calcular(a As Integer, b As Integer) As Integer
         Return Calcular(operaciones.suma, a, b)
     End Function
 
-    Function Calcular(ByRef operacion As Byte, ByVal a As Integer, ByVal b As Integer, ByVal c As Integer) As Integer
+    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), c)
     End Function
 
-    Function Calcular(ByRef operacion As Byte, ByVal a As Integer, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer) As Integer
+    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer, d As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), Calcular(operacion, c, d))
     End Function
 
