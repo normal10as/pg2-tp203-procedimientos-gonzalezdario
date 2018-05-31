@@ -28,13 +28,13 @@
     Function Calcular(operacion As Byte, a As Integer, b As Integer) As Integer
         Dim resultado As Integer
         Select Case operacion
-            Case 1
+            Case operaciones.suma
                 resultado = a + b
-            Case 2
+            Case operaciones.resta
                 resultado = a - b
-            Case 3
+            Case operaciones.multiplicacion
                 resultado = a * b
-            Case 4
+            Case operaciones.division
                 resultado = a / b
         End Select
         Return resultado
