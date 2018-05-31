@@ -71,14 +71,14 @@
     Function Calcular(operacion As Byte, a As Integer, b As Integer) As Integer
         Dim x As Integer
         Select Case operacion
-            Case 1
-                x = a + b
-            Case 2
-                x = a - b
-            Case 3
-                x = a * b
-            Case 4
-                x = a / b
+            Case operaciones.suma
+                Resultado = a + b
+            Case operaciones.resta
+                Resultado = a - b
+            Case operaciones.multiplicacion
+                Resultado = a * b
+            Case operaciones.division
+                Resultado = a / b
         End Select
         Return x
     End Function
