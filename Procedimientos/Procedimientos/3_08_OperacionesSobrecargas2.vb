@@ -72,13 +72,13 @@
         Dim x As Integer
         Select Case operacion
             Case operaciones.suma
-                Resultado = a + b
+                x = a + b
             Case operaciones.resta
-                Resultado = a - b
+                x = a - b
             Case operaciones.multiplicacion
-                Resultado = a * b
+                x = a * b
             Case operaciones.division
-                Resultado = a / b
+                x = a / b
         End Select
         Return x
     End Function
