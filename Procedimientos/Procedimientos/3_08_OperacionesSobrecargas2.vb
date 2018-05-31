@@ -7,25 +7,25 @@
     End Enum
 
     Sub Main()
-        Imprimir(9, 3)
-        Imprimir(operaciones.suma, 9, 3)
-        Imprimir(operaciones.resta, 9, 3)
-        Imprimir(operaciones.multiplicacion, 9, 3)
-        Imprimir(operaciones.division, 9, 3)
+        Resultado(9, 3)
+        Resultado(operaciones.suma, 9, 3)
+        Resultado(operaciones.resta, 9, 3)
+        Resultado(operaciones.multiplicacion, 9, 3)
+        Resultado(operaciones.division, 9, 3)
 
-        Imprimir(operaciones.suma, 27, 9, 3)
-        Imprimir(operaciones.resta, 27, 9, 3)
-        Imprimir(operaciones.multiplicacion, 27, 9, 3)
-        Imprimir(operaciones.division, 27, 9, 3)
+        Resultado(operaciones.suma, 27, 9, 3)
+        Resultado(operaciones.resta, 27, 9, 3)
+        Resultado(operaciones.multiplicacion, 27, 9, 3)
+        Resultado(operaciones.division, 27, 9, 3)
 
-        Imprimir(operaciones.suma, 243, 27, 9, 3)
-        Imprimir(operaciones.resta, 243, 27, 9, 3)
-        Imprimir(operaciones.multiplicacion, 243, 27, 9, 3)
-        Imprimir(operaciones.division, 243, 27, 9, 3)
+        Resultado(operaciones.suma, 243, 27, 9, 3)
+        Resultado(operaciones.resta, 243, 27, 9, 3)
+        Resultado(operaciones.multiplicacion, 243, 27, 9, 3)
+        Resultado(operaciones.division, 243, 27, 9, 3)
 
     End Sub
 
-    Sub Imprimir(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer)
+    Sub Resultado(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " = " & Calcular(a, b, c))
@@ -38,7 +38,7 @@
         End Select
     End Sub
 
-    Sub Imprimir(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer)
+    Sub Resultado(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " + " & d & " = " & Calcular(a, b, c, d))
@@ -51,7 +51,7 @@
         End Select
     End Sub
 
-    Sub Imprimir(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer, ByVal e As Integer)
+    Sub Resultado(ByRef a As Byte, ByVal b As Integer, ByVal c As Integer, ByVal d As Integer, ByVal e As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " + " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
@@ -64,7 +64,7 @@
         End Select
     End Sub
 
-    Sub Imprimir(ByVal a As Integer, ByVal b As Integer)
+    Sub Resultado(ByVal a As Integer, ByVal b As Integer)
         Console.WriteLine(a & " + " & b & " = " & Calcular(operaciones.suma, a, b))
     End Sub
 
