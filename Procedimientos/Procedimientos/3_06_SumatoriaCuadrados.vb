@@ -2,21 +2,19 @@
     Dim numero As Integer
 
     Sub Main()
-        numero = Ingresar()
+        IngresarValor(numero)
         Console.WriteLine("Sumatoria: " & Sumatoria(numero))
     End Sub
 
-    Function Ingresar()
-        Dim num As Integer
-        Console.Write("Ingrese un numero: ")
-        num = Console.ReadLine()
-
-        Do While num < 0
-            Console.WriteLine("¡Error! El numero ingresado es negativo.")
+    Sub IngresarValor(ByRef valor As Integer)
+        Do
             Console.Write("Ingrese un numero: ")
-            num = Console.ReadLine()
-        Loop
-        Return num
+            valor = Console.ReadLine()
+        Loop Until Validar(valor)
+
+    End Sub
+    Function Validar(num As Integer) As Boolean
+        Return num > 0
     End Function
 
     Function Sumatoria(ByRef n As Integer) As Integer
@@ -25,6 +23,9 @@
         For x = 1 To n
             a = a + Math.Pow(x, 2)
         Next
+
         Return a
+
     End Function
+
 End Module

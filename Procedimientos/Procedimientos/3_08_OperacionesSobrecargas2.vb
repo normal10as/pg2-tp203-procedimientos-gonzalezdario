@@ -25,7 +25,7 @@
 
     End Sub
 
-    Sub Resultado(a As Byte, b As Integer, c As Integer)
+    Sub Resultado(a As operaciones, b As Integer, c As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " = " & Calcular(a, b, c))
@@ -38,7 +38,7 @@
         End Select
     End Sub
 
-    Sub Resultado(a As Byte, b As Integer, c As Integer, d As Integer)
+    Sub Resultado(a As operaciones, b As Integer, c As Integer, d As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " + " & d & " = " & Calcular(a, b, c, d))
@@ -51,7 +51,7 @@
         End Select
     End Sub
 
-    Sub Resultado(a As Byte, b As Integer, c As Integer, d As Integer, e As Integer)
+    Sub Resultado(a As operaciones, b As Integer, c As Integer, d As Integer, e As Integer)
         Select Case a
             Case 1
                 Console.WriteLine(b & " + " & c & " + " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
@@ -68,30 +68,28 @@
         Console.WriteLine(a & " + " & b & " = " & Calcular(operaciones.suma, a, b))
     End Sub
 
-    Function Calcular(operacion As Byte, a As Integer, b As Integer) As Integer
-        Dim x As Integer
+    Function Calcular(operacion As operaciones, a As Integer, b As Integer) As Integer
         Select Case operacion
             Case operaciones.suma
-                x = a + b
+                Return a + b
             Case operaciones.resta
-                x = a - b
+                Return a - b
             Case operaciones.multiplicacion
-                x = a * b
+                Return a * b
             Case operaciones.division
-                x = a / b
+                Return a / b
         End Select
-        Return x
     End Function
 
     Function Calcular(a As Integer, b As Integer) As Integer
         Return Calcular(operaciones.suma, a, b)
     End Function
 
-    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer) As Integer
+    Function Calcular(operacion As operaciones, a As Integer, b As Integer, c As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), c)
     End Function
 
-    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer, d As Integer) As Integer
+    Function Calcular(operacion As operaciones, a As Integer, b As Integer, c As Integer, d As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), Calcular(operacion, c, d))
     End Function
 

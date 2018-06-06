@@ -42,21 +42,15 @@
     End Sub
 
     Function Area(a As Double) As Double
-        Dim resultado As Double
-        resultado = a * a
-        Return resultado
+        Return a * a
     End Function
 
     Function Area(a As Double, b As Double) As Double
-        Dim resultado As Double
-        resultado = a * b
-        Return resultado
+        Return a * b
     End Function
 
     Function Area(a As Double, b As Double, c As Double) As Double
-        Dim resultado As Double
-        resultado = ((a + b) / 2) * c
-        Return resultado
+        Return ((a + b) / 2) * c
     End Function
 
 End Module

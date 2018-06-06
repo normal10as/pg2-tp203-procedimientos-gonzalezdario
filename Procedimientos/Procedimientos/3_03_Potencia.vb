@@ -4,14 +4,13 @@
         Dim num As Integer
         Console.Write("Ingrese un numero: ")
         num = Console.ReadLine()
-        For x = 2 To 6
-            Potencia(num, x)
+        For exponente = 2 To 6
+            Console.WriteLine(num & "^" & exponente & " = " & Potencia(num, exponente))
         Next
     End Sub
 
     Function Potencia(ByVal numero As Integer, ByVal exponente As Integer) As Integer
-        Console.WriteLine(numero & "^" & exponente & " = " & Math.Pow(numero, exponente))
-        Return 0
+        Return Math.Pow(numero, exponente)
     End Function
 
 End Module

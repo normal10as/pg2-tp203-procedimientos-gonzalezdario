@@ -22,33 +22,30 @@
         Console.WriteLine(Calcular(operaciones.resta, 243, 27, 9, 3))
         Console.WriteLine(Calcular(operaciones.multiplicacion, 243, 27, 9, 3))
         Console.WriteLine(Calcular(operaciones.division, 243, 27, 9, 3))
-
     End Sub
 
-    Function Calcular(operacion As Byte, a As Integer, b As Integer) As Integer
-        Dim resultado As Integer
+    Function Calcular(operacion As operaciones, a As Integer, b As Integer) As Integer
         Select Case operacion
             Case operaciones.suma
-                resultado = a + b
+                Return a + b
             Case operaciones.resta
-                resultado = a - b
+                Return a - b
             Case operaciones.multiplicacion
-                resultado = a * b
+                Return a * b
             Case operaciones.division
-                resultado = a / b
+                Return a / b
         End Select
-        Return resultado
     End Function
 
     Function Calcular(a As Integer, b As Integer) As Integer
         Return Calcular(operaciones.suma, a, b)
     End Function
 
-    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer) As Integer
+    Function Calcular(operacion As operaciones, a As Integer, b As Integer, c As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), c)
     End Function
 
-    Function Calcular(operacion As Byte, a As Integer, b As Integer, c As Integer, d As Integer) As Integer
+    Function Calcular(operacion As operaciones, a As Integer, b As Integer, c As Integer, d As Integer) As Integer
         Return Calcular(operacion, Calcular(operacion, a, b), Calcular(operacion, c, d))
     End Function
 

@@ -6,27 +6,26 @@
         Console.WriteLine("Calculo de Volumen ")
         Console.WriteLine("--------------------------------------")
 
-        radio = Ingresar("Ingrese el radio: ")
-        altura = Ingresar("Ingrese la altura: ")
+        IngresarValor(radio, "radio")
+        IngresarValor(altura, "altura")
+
         Console.WriteLine("Su volumen es de: " & Volumen(radio, altura))
     End Sub
 
-    Function Ingresar(texto As String)
-        Dim num As Integer
-        Console.Write(texto)
-        num = Console.ReadLine()
+    Sub IngresarValor(ByRef valor As Integer, palabra As String)
+        Do
+            Console.Write("Ingrese " & palabra & ": ")
+            valor = Console.ReadLine()
+        Loop Until Validar(valor)
 
-        Do While num < 0
-            Console.WriteLine("¡Error! El numero ingresado es negativo.")
-            Console.Write(texto)
-            num = Console.ReadLine()
-        Loop
-        Return num
+    End Sub
+    Function Validar(num As Integer) As Boolean
+        Return num > 0
     End Function
 
-    Function Volumen(a As Double, b As Double)
-        Dim c As Double
-        c = Math.PI * Math.Pow(a, 2) * b
-        Return c
+
+
+    Function Volumen(a As Double, b As Double) As Double
+        Return Math.PI * Math.Pow(a, 2) * b
     End Function
 End Module
