@@ -22,45 +22,44 @@
         Resultado(operaciones.resta, 243, 27, 9, 3)
         Resultado(operaciones.multiplicacion, 243, 27, 9, 3)
         Resultado(operaciones.division, 243, 27, 9, 3)
-
     End Sub
 
     Sub Resultado(a As operaciones, b As Integer, c As Integer)
         Select Case a
-            Case 1
+            Case operaciones.suma
                 Console.WriteLine(b & " + " & c & " = " & Calcular(a, b, c))
-            Case 2
+            Case operaciones.resta
                 Console.WriteLine(b & " - " & c & " = " & Calcular(a, b, c))
-            Case 3
+            Case operaciones.multiplicacion
                 Console.WriteLine(b & " * " & c & " = " & Calcular(a, b, c))
-            Case 4
+            Case operaciones.division
                 Console.WriteLine(b & " / " & c & " = " & Calcular(a, b, c))
         End Select
     End Sub
 
     Sub Resultado(a As operaciones, b As Integer, c As Integer, d As Integer)
         Select Case a
-            Case 1
+            Case operaciones.suma
                 Console.WriteLine(b & " + " & c & " + " & d & " = " & Calcular(a, b, c, d))
-            Case 2
+            Case operaciones.resta
                 Console.WriteLine(b & " - " & c & " - " & d & " = " & Calcular(a, b, c, d))
-            Case 3
+            Case operaciones.multiplicacion
                 Console.WriteLine(b & " * " & c & " * " & d & " = " & Calcular(a, b, c, d))
-            Case 4
+            Case operaciones.division
                 Console.WriteLine(b & " / " & c & " / " & d & " = " & Calcular(a, b, c, d))
         End Select
     End Sub
 
     Sub Resultado(a As operaciones, b As Integer, c As Integer, d As Integer, e As Integer)
         Select Case a
-            Case 1
+            Case operaciones.suma
                 Console.WriteLine(b & " + " & c & " + " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
-            Case 2
-                Console.WriteLine(b & " - " & c & " - " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
-            Case 3
-                Console.WriteLine(b & " * " & c & " * " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
-            Case 4
-                Console.WriteLine(b & " / " & c & " / " & d & " + " & e & " = " & Calcular(a, b, c, d, e))
+            Case operaciones.resta
+                Console.WriteLine(b & " - " & c & " - " & d & " - " & e & " = " & Calcular(a, b, c, d, e))
+            Case operaciones.multiplicacion
+                Console.WriteLine(b & " * " & c & " * " & d & " * " & e & " = " & Calcular(a, b, c, d, e))
+            Case operaciones.division
+                Console.WriteLine(b & " / " & c & " / " & d & " / " & e & " = " & Calcular(a, b, c, d, e))
         End Select
     End Sub
 

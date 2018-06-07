@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F2DEA8CC-1B14-406B-8078-5AD2633F9353}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>Procedimientos.SumatoriaCuadrados</StartupObject>
+    <StartupObject>Procedimientos.OperacionesSobrecargas2</StartupObject>
     <RootNamespace>Procedimientos</RootNamespace>
     <AssemblyName>Procedimientos</AssemblyName>
     <FileAlignment>512</FileAlignment>
